@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import { ShowTheLocationWithRouter } from './components/router'
+import { Clock, Toggle, LoginControl, NameForm, Reservation, 
+  WelcomeDialog, SplitPane, DynamicContext, NestContext, MultiContext,
+  SignUpDialog, ContextDemo, OldContext} from './components/react-document'
+import { Table, Step, Menu } from './components/ant-design'
+import { Brother, Ref, ComponentRef, CustomTextInput, ForwardRef, Lifecycle } from './components/func'
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <ShowTheLocationWithRouter /> */}
+      {/* <Clock /> */}
+      {/* <ForwardRef /> */}
+      <Lifecycle />
     </div>
   );
 }
