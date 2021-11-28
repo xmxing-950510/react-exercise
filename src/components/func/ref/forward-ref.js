@@ -1,3 +1,7 @@
+/**
+ * forwardRef
+ * 与 index2对比
+ */
 import React from 'react'
 
 const TargetComponent = React.forwardRef((props, ref) => (

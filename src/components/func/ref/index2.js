@@ -1,3 +1,7 @@
+/**
+ * 与forward-ref对比
+ */
+
 import React, { Component } from 'react'
 
 class CustomTextInput extends Component {
@@ -9,8 +13,6 @@ class CustomTextInput extends Component {
   }
 
   focusTextInput() {
-    // 直接使用原生 API 使 text 输入框获得焦点
-    // 注意：我们通过 "current" 来访问 DOM 节点
     this.textInput.current.focus();
   }
 
@@ -39,6 +41,7 @@ class AutoFocusTextInput extends Component {
   }
 
   componentDidMount() {
+    console.log(this.textInput.current);
     this.textInput.current.focusTextInput();
   }
 

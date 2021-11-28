@@ -4,6 +4,7 @@ import ComponentRef from './ref/index2'
 import CustomTextInput from './ref/func-ref'
 import ForwardRef from './ref/forward-ref'
 import Lifecycle from './father-child' 
+import AntdRef from './ref/antd-ref'
 
 export { 
   Brother,
@@ -11,7 +12,8 @@ export {
   ComponentRef,
   CustomTextInput,
   ForwardRef,
-  Lifecycle
+  Lifecycle,
+  AntdRef
 }
  
  

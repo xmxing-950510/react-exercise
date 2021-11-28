@@ -1,21 +1,27 @@
-import './App.scss';
+import './App.scss'
 import { ShowTheLocationWithRouter } from './components/router'
-import { Clock, Toggle, LoginControl, NameForm, Reservation, 
+import {
+ Clock, Toggle, LoginControl, NameForm, Reservation, 
   WelcomeDialog, SplitPane, DynamicContext, NestContext, MultiContext,
-  SignUpDialog, ContextDemo, OldContext} from './components/react-document'
+  SignUpDialog, ContextDemo, OldContext } from './components/react-document'
 import { Table, Step, Menu } from './components/ant-design'
-import { Brother, Ref, ComponentRef, CustomTextInput, ForwardRef, Lifecycle } from './components/func'
+import {
+ Brother, Ref, ComponentRef, CustomTextInput, ForwardRef, Lifecycle,
+  AntdRef 
+} from './components/func'
+import ReduxDemo from './react-dedux'
 
+import FuncComponent from './components/react-document/function-componet/self-hook/index4'
 
-function App() {
+function App () {
   return (
     <div className="App">
       {/* <ShowTheLocationWithRouter /> */}
       {/* <Clock /> */}
-      {/* <ForwardRef /> */}
-      <Lifecycle />
+      <ReduxDemo />
+      {/* <Lifecycle /> */}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
