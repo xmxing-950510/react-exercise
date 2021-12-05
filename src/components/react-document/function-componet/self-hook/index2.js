@@ -1,20 +1,26 @@
-
 import React from "react";
 import { useAsync } from './utils';
 
 export default function UserList() {
   // 通过 useAsync 这个函数，只需要提供异步逻辑的实现
+  console.log('function-----');
   const {
     execute: fetchUsers,
     data: users,
     loading,
     error,
   } = useAsync(async () => {
+    console.log('3------');
     const res = await fetch("https://reqres.in/api/users/");
     const json = await res.json();
     return json.data;
   });
-  
+  let json = JSON.stringify(users)  + '----' +
+  JSON.stringify(loading) + '----' +
+  JSON.stringify(error)  
+
+  console.log(json);
+
   return (
     <div className="user-list">      
       <button onClick={fetchUsers} disabled={loading}>        

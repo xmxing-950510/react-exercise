@@ -9,9 +9,9 @@ import {
  Brother, Ref, ComponentRef, CustomTextInput, ForwardRef, Lifecycle,
   AntdRef 
 } from './components/func'
-import ReduxDemo from './react-dedux'
+import ReduxDemo from './react-redux'
 
-import FuncComponent from './components/react-document/function-componet/self-hook/index4'
+import FuncComponent from './components/react-document/function-componet/self-hook/index2'
 
 function App () {
   return (
