@@ -14,12 +14,15 @@ export default function Counter() {
   return (
     <div>
       <span>{count}</span>
-      <Button
-        onClick={() => dispatch({ type: 'counter/incremented' })}
-      >+</Button>
-      <Button
-        onClick={() => dispatch({ type: 'counter/decremented' })}
-      >-</Button>
+      <div>
+        <Button
+          onClick={() => dispatch({ type: 'counter/incremented' })}
+        >+</Button>
+        <Button
+          onClick={() => dispatch({ type: 'counter/decremented' })}
+        >-</Button>
+      </div>
+      
     </div>
   )
 }

@@ -1,13 +1,19 @@
+/**
+ * 嵌套路由
+ */
 import React from "react";
+import { Button } from "antd";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link,
   useRouteMatch,
-  useParams
+  useParams,
+  Redirect
 } from "react-router-dom";
 import './index.scss'
+import { useHistory, useLocation } from "react-router-dom/cjs/react-router-dom.min";
 
 export default function App() {
   return (
@@ -37,6 +43,7 @@ export default function App() {
             <Home />
           </Route>
         </Switch>
+        <BlogPost />
       </div>
     </Router>
   );
@@ -52,10 +59,18 @@ function About() {
 
 function Topics() {
   let match = useRouteMatch();
+  let history = useHistory()
   console.log('topics', match);
+
+  const handleLink = () =>{
+    history.push('/blog/aa', {
+      name: 'aaa',
+      msg: 'nihao'
+    })
+  }
   return (
     <div>
-      <div>Topics</div>
+      <h2>Topics</h2>
 
       <ul>
         <li>
@@ -67,7 +82,7 @@ function Topics() {
           </Link>
         </li>
       </ul>
-
+      <Button onClick={() => {handleLink()}}>跳转到 /blog/aa</Button>
       {/* The Topics page has its own <Switch> with more routes
           that build on the /topics URL path. You can think of the
           2nd <Route> here as an "index" page for all topics, or
@@ -80,6 +95,7 @@ function Topics() {
           <h3>Please select a topic.</h3>
         </Route>
       </Switch>
+      
     </div>
   );
 }
@@ -89,4 +105,22 @@ function Topic() {
   let match = useRouteMatch();
   console.log('topic', match);
   return <h3>Requested topic ID: {topicId}</h3>;
+}
+
+function BlogPost() {
+  let match = useRouteMatch("/blog/:slug");
+  let location = useLocation()
+  console.log('match', match);
+  console.log('location', location);
+  // Do whatever you want with the match...
+  return (
+    <div>
+      {
+        match && <div>
+        BlogPost1
+      </div>
+      }
+    </div>
+    
+  )
 }

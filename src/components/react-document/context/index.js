@@ -30,7 +30,10 @@ function Toolbar() {
 class ThemedButton extends React.Component {
   static contextType = ThemeContext;
   render() {
-    return <Button theme={this.context} />;
+    return <div>
+      <Button theme={this.context} />
+    </div>
+    
   }
 }
 

@@ -1,3 +1,4 @@
+import { Button } from 'antd';
 import React from 'react'
 import {ThemeContext} from './theme-context';
 
@@ -6,10 +7,10 @@ class ThemedButton extends React.Component {
     let props = this.props;
     let theme = this.context;
     return (
-      <button
+      <Button
         {...props}
         style={{backgroundColor: theme.background}}
-      />
+      >aaa</Button>
     );
   }
 }
