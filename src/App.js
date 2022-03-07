@@ -3,7 +3,9 @@ import { NestedRouting } from './react-router'
 import {
  Clock, Toggle, LoginControl, NameForm, Reservation, 
   WelcomeDialog, SplitPane, DynamicContext, NestContext, MultiContext,
-  SignUpDialog, ContextDemo, OldContext } from './components/react-document'
+  SignUpDialog, ContextDemo, OldContext,
+  
+ } from './react-document'
 import { Table, Step, Menu } from './components/ant-design'
 import {
  Brother, Ref, ComponentRef, CustomTextInput, ForwardRef, Lifecycle,
@@ -11,15 +13,19 @@ import {
 } from './components/func'
 import ReduxDemo from './react-redux'
 import Communication from './father-child/event'
+import Count from './hook/custom/count'
+import Async from './hook/custom/useAsync'
+// import ScrollHook from './hook/custom/useScroll'
 
-import FuncComponent from './components/react-document/function-componet/forwardRef'
-import ContextComponent from './components/react-document/context/dynamic-context'
+import FuncComponent from './react-document/function-componet/forwardRef'
+import ContextComponent from './react-document/context/dynamic-context'
 
+import RenderProps from './react-document/render-props'
 function App () {
   return (
     <div className="App">
       {/* <ShowTheLocationWithRouter /> */}
-      <NestedRouting />
+      <Async />
       {/* <ReduxDemo /> */}
       {/* <Lifecycle /> */}
     </div>

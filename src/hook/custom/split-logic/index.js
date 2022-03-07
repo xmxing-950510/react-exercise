@@ -1,3 +1,7 @@
+/**
+ * 设想现在有这样一个需求：我们需要展示一个博客文章的列表，并且有一列要显示文章的分类。
+ * 同时，我们还需要提供表格过滤功能，以便能够只显示某个分类的文章。
+ */
 
 import React, { useEffect, useCallback, useMemo, useState } from "react";
 import { Select, Table } from "antd";
@@ -80,6 +84,7 @@ const columns = [
 
 export default function BlogList() {
   const [selectedCategory, setSelectedCategory] = useState(null);
+  
   // 获取文章列表
   const { articles, articlesError } = useArticles();
   // 获取分类列表

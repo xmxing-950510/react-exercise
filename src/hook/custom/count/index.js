@@ -1,7 +1,7 @@
 
-import React from 'react';
-import { useCounter } from './utils'
 import { Button } from 'antd';
+import React from 'react';
+import useCounter from './count';
 
 export default function Counter() {
   // 调用自定义 Hook
@@ -10,8 +10,8 @@ export default function Counter() {
   // 渲染 UI
   return (
     <div>
-      <p>{count}</p>
       <Button onClick={decrement}> - </Button>
+      <p>{count}</p>
       <Button onClick={increment}> + </Button>
       <Button onClick={reset}> reset </Button>
     </div>

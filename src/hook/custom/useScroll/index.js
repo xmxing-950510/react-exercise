@@ -2,14 +2,14 @@
  * 封装滚动条事件 返回顶部
  */
 
-import React, { useCallback, useEffect } from 'react';
-import { useScroll } from './utils';
+import React, { useCallback } from 'react';
+import useScroll from './useScroll';
 
-export default function ScrollTop() {
+function ScrollTop() {
   const { y } = useScroll();
 
   const goTop = useCallback(() => {
-    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
   }, []);
 
   const style = {
@@ -29,17 +29,7 @@ export default function ScrollTop() {
   return null;
 }
 
-function Test() {
-  useEffect(() => {
-      document.addEventListener("scroll", handler);
-    return () => {
-      document.removeEventListener("scroll", handler);
-    }
-  }, [])
-
-  const handler = () => {
-    console.log(document.body.scrollTop);
-  }
+export default function Test() {
 
   return (
     <div>
